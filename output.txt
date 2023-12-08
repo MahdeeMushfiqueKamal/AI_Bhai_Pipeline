@@ -1,0 +1,12 @@
+FastAPI
+
+1. FastAPI is built on Starlette and Pydantic
+2. FastAPI is type-safe and auto-documents API
+3. FastAPI is built on async functions
+4. FastAPI is open source
+5. FastAPI supports Python 3.6+
+6. FastAPI is highly performant
+7. FastAPI supports OAuth2 authentication
+8. FastAPI handles files & data with high performance
+9. FastAPI uses OpenAPI & JSON Schema
+10. FastAPI integrates with databases & ORMs
