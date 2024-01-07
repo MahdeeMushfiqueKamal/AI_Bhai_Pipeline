@@ -9,18 +9,25 @@
     <style>
         body {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
+            height: 100vh;
             margin: 0;
+            background: url('static/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .jumbotron {
+            margin-top: 0; /* Remove default top margin */
+            background-color: rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container mt-5">
-        <div class="jumbotron">
+    <div class="container">
+        <div class="jumbotron text-center">
             <h1 class="display-4">Welcome to AI Bhai!</h1>
             <p class="lead">A platform for managing your social media campaign using AI-generated content.</p>
             <hr class="my-4">

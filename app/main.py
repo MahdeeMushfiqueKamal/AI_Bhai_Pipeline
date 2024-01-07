@@ -1,9 +1,9 @@
-import json
 from flask import Flask, flash, get_flashed_messages, redirect, render_template, request, session, url_for
 import hashlib
 from datetime import timedelta
 from utils import get_db
 from pydantic import BaseModel
+import logging
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "your_secret_key"
@@ -33,12 +33,10 @@ def login():
         password = hashlib.sha256(password.encode('utf-8')).hexdigest()
 
         user_profile = db.users.find_one({"username": username, "password": password}, projection={"_id": False})
-
-        print(f"user_profile: {user_profile}")
     
         if user_profile:
             user_profile = User.parse_obj(user_profile)
-            print(f"Logging user = {user_profile.username}")
+            logging.info(f"Logging user = {user_profile.username}")
             session.permanent = True
             session["user"] = user_profile.dict()
             return redirect(url_for("dashboard"))
@@ -48,7 +46,6 @@ def login():
     
     if request.method == "GET":
         flash_msg = get_flashed_messages()
-        print(f"flash_msg: {flash_msg}")
         return render_template("login.html", flash_msg=flash_msg)
 
 
@@ -66,12 +63,12 @@ def dashboard():
     return render_template("dashboard.html")
 
 
-@app.route("/add-post")
+@app.route("/new_post")
 def add_post():
     if "user" not in session:
         return redirect(url_for("login"))
 
-    return render_template("add_post.html")
+    return render_template("new_post.html")
 
 
 if __name__ == "__main__":

@@ -1,10 +1,12 @@
-1. Open source web framework
-2. Used for building complex websites
-3. Written in Python
-4. Follows the MVC pattern
-5. Includes ORM for data access
-6. Comes with an admin panel
-7. Offers built-in templating system
-8. Scalable and secure
-9. Used by Instagram, Pinterest & NASA
-10. Easy setup & deployment
+compiler
+
+1. Compilers translate high-level code into machine language
+2. Compilers produce executable code
+3. Compilers optimize code for better performance
+4. Compilers check code for errors
+5. Compilers typically have a front-end and back-end
+6. Compilers are used for different programming languages
+7. Compilers can detect and correct syntax errors
+8. Compilers can handle complex algorithms
+9. Compilers can detect memory leaks
+10. Compilers can produce optimized code for specific hardware
